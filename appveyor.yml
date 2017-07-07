@@ -1,14 +1,11 @@
-image: Visual Studio 2015
-
+version: 5.0.{build}
+image: Visual Studio 2017
+configuration: Release,Debug
 before_build:
 - nuget restore
-- choco install opencover.portable
-- choco install codecov
-
 build:
   project: Polymer2RewriteProvider.sln
   verbosity: minimal
-
-test_script:
-- OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:".\Tests\bin\Debug\Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[MyUnitTests*]*" -output:".\MyProject_coverage.xml"
-- codecov -f "MyProject_coverage.xml
+artifacts:
+- path: bin\Release\Polymer2RewriteProvider5.dll
+  name: Es2015-IIS-Rewrite-Provider
