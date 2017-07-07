@@ -1,16 +1,21 @@
 version: 5.0.{build}
+skip_tags: true
 image: Visual Studio 2017
 before_build:
 - nuget restore
+configuration:
+- Debug
+- Release
 build:
   project: Polymer2RewriteProvider.sln
   verbosity: minimal
 artifacts:
-- path: Polymer2RewriteProvider\bin\Debug\Polymer2RewriteProvider5.dll
+- path: bin\Release\Polymer2RewriteProvider5.dll
   name: main
-- path: Polymer2RewriteProvider\bin\Debug\UAParser.dll
+- path: bin\Release\UAParser.dll
   name: main
 deploy:
 - provider: GitHub
   auth_token:
     secure: B1V9bVQekg1bOaTB3QAsHdJLKVCpTBOof5CDhw4vOHyX3paDInQXmpFV3o3IN1Ht
+
