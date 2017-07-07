@@ -6,9 +6,9 @@ build:
   project: Polymer2RewriteProvider.sln
   verbosity: minimal
 artifacts:
-- path: bin\Release\Polymer2RewriteProvider5.dll
+- path: Polymer2RewriteProvider\bin\Release\Polymer2RewriteProvider5.dll
   name: main
-- path: bin\Release\UAParser.dll
+- path: Polymer2RewriteProvider\bin\Release\UAParser.dll
   name: main
 deploy:
 - provider: GitHub
