@@ -46,11 +46,11 @@ namespace Polymer2RewriteProvider5
 
             var name = c.UserAgent.Family;
 
-            var supportsEs2015 = (name == "Chrome" && majorVersion >= 49) ||
+            var supportsEs2015 = ((name == "Chrome" || name == "Chrome Mobile") && majorVersion >= 49) ||
                                  (name == "Chromium" && majorVersion >= 49) ||
                                  (name == "OPR" && majorVersion >= 36) ||
                                  (name == "Vivaldi" && majorVersion >= 1) ||
-                                 (name == "Mobile Safari" && majorVersion >= 10) ||
+                                 ((name == "Mobile Safari" || name == "Mobile Safari UIWebView") && majorVersion >= 10) ||
                                  (name == "Safari" && majorVersion >= 10) ||
                                  // Note: The Edge user agent uses the EdgeHTML version, not the main
                                  // release version (e.g. EdgeHTML 15 corresponds to Edge 40). See

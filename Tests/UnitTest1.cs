@@ -23,6 +23,70 @@ namespace Tests
         }
 
         [TestMethod]
+        public void ChromeMobileUserAgentResolvesEs6FilePath()
+        {
+            //Arrange
+            var input = "FILE,|Mozilla/5.0 (Linux; Android 7.1.2; Pixel XL Build/NKG47L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36,|a=123&b=1222,|/images/test.html";
+            var provider = new Polymer2RewriteProvider5.Polymer2RewriteProvider4();
+            provider.Initialize(new Dictionary<string, string> { { "Delimiter", ",|" } }, null);
+
+            //Act
+            var result = provider.Rewrite(input);
+
+            //Assert
+            Assert.AreEqual("es6/images/test.html?a=123&b=1222", result);
+        }
+
+        [TestMethod]
+        public void SafariUserAgentResolvesEs6FilePath()
+        {
+            //Arrange
+            var input = "FILE,|Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.21 (KHTML, like Gecko) Version/10.0 Mobile/15A5278f Safari/602.1,|a=123&b=1222,|/images/test.html";
+            var provider = new Polymer2RewriteProvider5.Polymer2RewriteProvider4();
+            provider.Initialize(new Dictionary<string, string> { { "Delimiter", ",|" } }, null);
+
+            //Act
+            var result = provider.Rewrite(input);
+
+            //Assert
+            Assert.AreEqual("es6/images/test.html?a=123&b=1222", result);
+        }
+
+        [TestMethod]
+        public void SafariMobileUserAgentResolvesEs6FilePath()
+        {
+            //Arrange
+            var input = "FILE,|Mozilla/5.0+(iPhone;+CPU+iPhone+OS+10_3_2+like+Mac+OS+X)+AppleWebKit/603.2.4+(KHTML,+like+Gecko)+Version/10.0+Mobile/14F89+Safari/602.1,|a=123&b=1222,|/images/test.html";
+            var provider = new Polymer2RewriteProvider5.Polymer2RewriteProvider4();
+            provider.Initialize(new Dictionary<string, string> { { "Delimiter", ",|" } }, null);
+
+            //Act
+            var result = provider.Rewrite(input);
+
+            //Assert
+            Assert.AreEqual("es6/images/test.html?a=123&b=1222", result);
+        }
+
+
+
+        
+        [TestMethod]
+        public void IosHomeScreenAppIconRequestUserAgentResolvesEs5FilePath()
+        {
+            //Arrange
+            var input = "FILE,|MobileSafari/602.1+CFNetwork/811.5.4+Darwin/16.6.0,|a=123&b=1222,|/images/test.html";
+            var provider = new Polymer2RewriteProvider5.Polymer2RewriteProvider4();
+            provider.Initialize(new Dictionary<string, string> { { "Delimiter", ",|" } }, null);
+
+            //Act
+            var result = provider.Rewrite(input);
+
+            //Assert
+            Assert.AreEqual("es5/images/test.html?a=123&b=1222", result);
+        }
+
+
+        [TestMethod]
         public void IeUserAgentResolvesEs5RootPath()
         {
             //Arrange
