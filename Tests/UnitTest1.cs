@@ -8,7 +8,7 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void ES5File()
+        public void IeUserAgentResolvesEs5FilePath()
         {
             //Arrange
             var input = "FILE,|Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko,|a=123&b=1222,|/images/test.html";
@@ -23,7 +23,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ES5Index()
+        public void IeUserAgentResolvesEs5RootPath()
         {
             //Arrange
             var input = "INDEX,|Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko,|a=123&b=1222,|/search";
@@ -38,7 +38,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ES6File()
+        public void ChromeUserAgentResolvesEs6FilePath()
         {
             //Arrange
             var input = "FILE,|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36,|,|/images/leavitt_group_logo.png";
@@ -53,7 +53,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ES6Index()
+        public void ChromeUserAgentResolvesEs6RootPath()
         {
             //Arrange
             var input = "INDEX,|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36,|,|/search/asss";
