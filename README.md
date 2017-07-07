@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/3v7oopi5au5xvbox/branch/master?svg=true)](https://ci.appveyor.com/project/aarondrabeck/es2015-iis-rewrite-provider/branch/master)
+
+
 This module will rewrite urls to the es5 folder if an es5 browser is detected or es6 if a es6 browser is detected.
 
 1. You must build and register Polymer2RewriteProviderX.dll and UAParser.dll to the GAC on the web server.  
