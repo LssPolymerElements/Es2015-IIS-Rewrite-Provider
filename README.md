@@ -5,10 +5,9 @@ This module will rewrite urls to the es5 folder if an es5 browser is detected or
 
 [MORE DOCS ON HOW TO REGISTER AND SETUP THE PROVIDER](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/developing-a-custom-rewrite-provider-for-url-rewrite-module)
 
-```
-#!html
 
-
+Sample rewrite rules for web.config
+``` html
  <rule name="Polymer2ExtensionLessUrls" patternSyntax="Wildcard" stopProcessing="true">
           <match url="*.*" negate="true" />
           <conditions>
