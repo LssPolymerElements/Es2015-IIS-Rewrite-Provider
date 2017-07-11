@@ -27,6 +27,7 @@ notifications:
   on_build_success: true
   on_build_failure: false
   on_build_status_changed: false
+  template: "<{{buildUrl}}|Build [{{projectName}}] {{buildVersion}} {{status}}> Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}: _{{commitMessage}}_"  
 - provider: Slack
   incoming_webhook:
     secure: JhngXiwYl7JkEO7bo4Fh1k6rOy+lZ3dFxGFI4FL3IeqzmMP5SvRSku5VvYel8VEXyavmuo/izODp6H0mjj4tSZhumWBkfENV0JNN+W6Kss8=
