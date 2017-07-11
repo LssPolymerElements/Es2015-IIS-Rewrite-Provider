@@ -27,7 +27,7 @@ notifications:
   on_build_success: true
   on_build_failure: false
   on_build_status_changed: false
-  - provider: Slack
+- provider: Slack
   incoming_webhook:
     secure: JhngXiwYl7JkEO7bo4Fh1k6rOy+lZ3dFxGFI4FL3Iep6ruC4WVIj35Px/jzc4Xi0GbEAGTjRQi8NZg4s0V0zZGn3IMRp+HNRdMzmh/Y492s=
   channel: '#build-failed'
