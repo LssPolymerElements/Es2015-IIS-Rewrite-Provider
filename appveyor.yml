@@ -19,3 +19,10 @@ deploy:
     secure: 73BMyeWNs+Y0cyNA2FzsPiO4b93zn8pBdSO/oPc9GvT+znZj4vZAWF0bIu0G6G3i
   on:
     branch: master
+- provider: Slack
+  auth_token:
+    secure: NjepdhLvwEaUE71oMr4nI9mMyoKveEBXBqgalkC4DthbMLPxETC3iT0B7vscx9/gOTBsFeU8XJ9jpO+TbQgItK/3oVSqQeqzXxecHUzu5XY=
+  channel: '#build-success'
+    
+    
+
