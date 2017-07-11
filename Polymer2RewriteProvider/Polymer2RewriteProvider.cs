@@ -5,7 +5,7 @@ using UAParser;
 
 namespace Polymer2RewriteProvider5
 {
-    public class Polymer2RewriteProvider4 : IRewriteProvider, IProviderDescriptor
+   --public class Polymer2RewriteProvider4 : IRewriteProvider, IProviderDescriptor
     {
         private string _delimiter;
 
