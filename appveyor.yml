@@ -20,9 +20,11 @@ deploy:
   on:
     branch: master
 - provider: Slack
-  auth_token:
-    secure: NjepdhLvwEaUE71oMr4nI9mMyoKveEBXBqgalkC4DthbMLPxETC3iT0B7vscx9/gOTBsFeU8XJ9jpO+TbQgItK/3oVSqQeqzXxecHUzu5XY=
+  incoming_webhook:
+    secure: JhngXiwYl7JkEO7bo4Fh1k6rOy+lZ3dFxGFI4FL3Iep6ruC4WVIj35Px/jzc4Xi0GbEAGTjRQi8NZg4s0V0zZGn3IMRp+HNRdMzmh/Y492s=
   channel: '#build-success'
+  
+   
     
     
 
