@@ -229,3 +229,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+\.vs/Polymer2RewriteProvider/v15/Server/sqlite3/
+
+\.vs/Polymer2RewriteProvider/DesignTimeBuild/

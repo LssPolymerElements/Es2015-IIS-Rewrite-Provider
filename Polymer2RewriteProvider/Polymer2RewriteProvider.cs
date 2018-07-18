@@ -64,6 +64,10 @@ namespace Polymer2RewriteProvider5
 
             var esVersion = supportsEs2015 ? "es6" : "es5";
 
+            // Used to detect airtame devices
+            if (c.String.Contains("armv7l"))
+                esVersion = "es5";
+
             if (!string.IsNullOrEmpty(queryString))
                 queryString = $"?{queryString}";
 
