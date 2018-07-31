@@ -130,5 +130,20 @@ namespace Tests
             //Assert
             Assert.AreEqual("es6/", result);
         }
+
+        [TestMethod]
+        public void Chrome99UserAgentResolvesEs6RootPath()
+        {
+            //Arrange
+            var input = "INDEX,|Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.77.34.5 Safari/537.36,|,|/search/asss";
+            var provider = new Polymer2RewriteProvider5.Polymer2RewriteProvider4();
+            provider.Initialize(new Dictionary<string, string> { { "Delimiter", ",|" } }, null);
+
+            //Act
+            var result = provider.Rewrite(input);
+
+            //Assert
+            Assert.AreEqual("es5/", result);
+        }
     }
 }
